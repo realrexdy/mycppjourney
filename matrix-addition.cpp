@@ -33,6 +33,7 @@ int main(){
                 cin >> b[i][j];
             }
         }
+        cout << "The resultant matrix is:\n";
         for(int i=0;i<p;i++){
             for(int j=0;j<q;j++){
                 cout << a[i][j]+b[i][j] << "\t";
