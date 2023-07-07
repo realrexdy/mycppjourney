@@ -20,28 +20,28 @@ int res;
 cin >> res;
 if(res<9 && res>0){
     if(res==1){
-    cout << ew*0.38 <<"\n";
+    cout << ew*0.38<<"kg" <<"\n";
 }
 else if(res==2){
-    cout << ew*0.91 <<"\n";
+    cout << ew*0.91<<"kg" <<"\n";
 }
 else if(res==3){
-    cout << ew*27.9 <<"\n";
+    cout << ew*27.9<<"kg" <<"\n";
 }
 else if(res==4){
-    cout << ew*0.38 <<"\n";
+    cout << ew*0.38<<"kg" <<"\n";
 }
 else if(res==5){
-    cout << ew*2.54 <<"\n";
+    cout << ew*2.54<<"kg" <<"\n";
 }
 else if(res==6){
-    cout << ew*1.07 <<"\n";
+    cout << ew*1.07<<"kg"<<"\n";
 }
 else if(res==7){
-    cout << ew*0.89 <<"\n";
+    cout << ew*0.89<<"kg" <<"\n";
 }
 else if(res==8){
-    cout << ew*1.13 <<"\n";
+    cout << ew*1.13<<"kg" <<"\n";
 }
 else{
 }
