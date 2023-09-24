@@ -13,7 +13,7 @@ int i=1;
 
 //main function
 int main(){
-    //Subprogram section
+    //Subprogramsection
     cout << "Please enter the number:";
     cin >> x;
     for(i;i<x;i++){
