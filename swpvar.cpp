@@ -9,7 +9,7 @@ int main(){
     float input;
     
     cout << "How do you want to swap your variables?\n";
-    cout << "\n" << "1.Temporary Variable\n2.Using Addition\n3.Using Division\n\n";
+    cout << "1.Temporary Variable\n2.Using Addition\n3.Using Division\n\n";
     cin >> input;
     if(input == 1){
     cout << "\n";
@@ -59,6 +59,8 @@ int main(){
     cout << "Variable 2: ";
     cout << b << "\n";
     }
+
+    else{cout << "\nPlease enter a valid responce\n";}
 
     return 0;
 }
