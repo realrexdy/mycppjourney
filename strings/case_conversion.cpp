@@ -23,6 +23,24 @@ string lwrcse(string mixcse){
 string snkcse(string mixcse){
 	size_t leng = size(mixcse);
 	mixcse = lwrcse(mixcse);
+	for(int i=1; i<leng; i++){
+		if(mixcse[i]!=' '&& (mixcse[i]<65 || (mixcse[i]>90&&mixcse[i]<97) || mixcse[i]>122)){
+			for(int j=i; j<leng; j++){
+				mixcse[j]=mixcse[j+1];
+			}
+			i-=1;
+			leng--;
+		}
+	}
+	for(int i=1; i<leng; i++){
+		if(mixcse[i]==' '&&mixcse[i+1]==' '){
+			for(int j=i; j<leng; j++){
+				mixcse[j]=mixcse[j+1];
+			}
+			i-=1;
+			leng--;
+		}
+	}
 	for(int i=0; i<leng; i++){
 		if((mixcse[i]<65 || (mixcse[i]>90 && mixcse[i]<97) || mixcse[i]>122)){
 			mixcse[i]='_';
@@ -33,6 +51,24 @@ string snkcse(string mixcse){
 string kbbcse(string mixcse){
 	size_t leng = size(mixcse);
 	mixcse = lwrcse(mixcse);
+	for(int i=1; i<leng; i++){
+		if(mixcse[i]!=' '&& (mixcse[i]<65 || (mixcse[i]>90&&mixcse[i]<97) || mixcse[i]>122)){
+			for(int j=i; j<leng; j++){
+				mixcse[j]=mixcse[j+1];
+			}
+			i-=1;
+			leng--;
+		}
+	}
+	for(int i=1; i<leng; i++){
+		if(mixcse[i]==' '&&mixcse[i+1]==' '){
+			for(int j=i; j<leng; j++){
+				mixcse[j]=mixcse[j+1];
+			}
+			i-=1;
+			leng--;
+		}
+	}
 	for(int i=0; i<leng; i++){
 		for(int i=0; i<leng; i++){
 		if((mixcse[i]<65 || (mixcse[i]>90 && mixcse[i]<97) || mixcse[i]>122)){
@@ -46,6 +82,15 @@ string cmlcse(string mixcse){
 	size_t leng = size(mixcse);
 	mixcse = lwrcse(mixcse);
 	for(int i=1; i<leng; i++){
+		if(mixcse[i]==' '&&mixcse[i+1]==' '){
+			for(int j=i; j<leng; j++){
+				mixcse[j]=mixcse[j+1];
+			}
+			i-=1;
+			leng--;
+		}
+	}
+	for(int i=1; i<leng; i++){
 		if(mixcse[i-1]==' '){
 			if(mixcse[i]>96 && mixcse[i]<123){
 				mixcse[i]-=32;
@@ -56,10 +101,11 @@ string cmlcse(string mixcse){
 		}
 	}
 	for(int i=1; i<leng; i++){
-		if(mixcse[i]==' '){
+		if(mixcse[i]==' '|| (mixcse[i]<65 || (mixcse[i]>90&&mixcse[i]<97) || mixcse[i]>122)){
 			for(int j=i; j<leng; j++){
 				mixcse[j]=mixcse[j+1];
 			}
+			i-=1;
 			leng--;
 		}
 	}
@@ -80,5 +126,4 @@ int main(){
 	cout << "\n Kebabcase:  " << kebebcase << "\n";
 	string camelcase=cmlcse(mixcse);
 	cout << "\n Camelcase:  " << camelcase << "\n";
-	return 0;
 }
