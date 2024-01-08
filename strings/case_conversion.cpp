@@ -42,7 +42,7 @@ string snkcse(string mixcse){
 		}
 	}
 	for(int i=0; i<leng; i++){
-		if((mixcse[i]<65 || (mixcse[i]>90 && mixcse[i]<97) || mixcse[i]>122)){
+		if(mixcse[i]==' '){
 			mixcse[i]='_';
 		}
 	}
@@ -71,7 +71,7 @@ string kbbcse(string mixcse){
 	}
 	for(int i=0; i<leng; i++){
 		for(int i=0; i<leng; i++){
-		if((mixcse[i]<65 || (mixcse[i]>90 && mixcse[i]<97) || mixcse[i]>122)){
+		if(mixcse[i]==' '){
 			mixcse[i]='-';
 		}
 	}
