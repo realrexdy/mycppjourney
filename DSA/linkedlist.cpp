@@ -10,7 +10,7 @@ public:
     }
 };
 
-namespace ssl{
+namespace sll{
     void length(node* head){
     node* current = head;
     int size = 0;
@@ -31,15 +31,19 @@ namespace ssl{
     }
 
     void traverse(node* head){
-        while(head->next != nullptr){
-            std::cout << head->data;
+        while(head != nullptr){
+            std::cout << head->data << ", ";
             head = head->next;
         }
     }
 
-    void traverse(node* head){
-        while(head->next != nullptr){
-            delete 
+    void freeSLL(node* head){
+        node* temp = head;
+        node* next;
+        while(temp != nullptr){
+            next = temp->next;
+            delete temp;
+            temp = next;
         }
     }
 
@@ -55,11 +59,14 @@ int main(){
         int temp;
         std::cin >> temp;
         if(head == nullptr){
-            node* head = new node(temp);
+            head = new node(temp);
+            continue;
         }
-        ssl::insertAtEnd(head, temp);
+        sll::insertAtEnd(head, temp);
     }
-    ssl::traverse(head);
+    sll::traverse(head);
+
+    sll::freeSLL(head);
 
     return 0;
 }
