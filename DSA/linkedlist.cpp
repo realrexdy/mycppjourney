@@ -30,6 +30,20 @@ namespace sll{
         }
     }
 
+    void insertAtIndex(node* head, int value, int index){
+        int i = 0;
+        while(i!=(index-1)){
+            if(head == nullptr){
+                std::cout << "Index out of range.\n";
+            }
+            head = head->next;
+            ++i;
+        }
+        node* newNode = new node(value);
+        newNode->next = head->next;
+        head->next = newNode;
+    }
+
     void traverse(node* head){
         while(head != nullptr){
             std::cout << head->data << ", ";
@@ -65,7 +79,9 @@ int main(){
         sll::insertAtEnd(head, temp);
     }
     sll::traverse(head);
-
+    sll::insertAtIndex(head, 69, 3);
+    std::cout << "\n";
+    sll::traverse(head);
     sll::freeSLL(head);
 
     return 0;
